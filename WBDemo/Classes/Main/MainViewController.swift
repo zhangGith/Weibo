@@ -15,19 +15,20 @@ class MainViewController: UITabBarController {
 
         // Do any additional setup after loading the view.
         tabBar.tintColor = .orange
-//        addChildViewControllers()
+        addChildViewControllers()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
+        super.viewWillAppear(animated)
+
         tabBar.addSubview(composeBtn)
-        
+
         let rect = composeBtn.frame
         let width = tabBar.bounds.width / CGFloat(children.count)
         composeBtn.frame = CGRect(x: 2 * width, y: 0, width: width, height: rect.height)
     }
-/*
+
+
     func add(childVCName: String?, title: String?, imageName: String?) {
         guard let name = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String else {
             NJLog(message: "获取命名空间失败")
@@ -77,19 +78,21 @@ class MainViewController: UITabBarController {
         }
     }
     
-    */
+    
     
     @objc private func composeClick(btn: UIButton) {
-        NJLog(message: "btn")
+        print(btn)
+        NJLog(message: btn)
     }
+   
     
     private lazy var composeBtn: UIButton = { () -> UIButton in
         let btn = UIButton(imageName: "tabbar_compose_icon_add", backgroundImageName: "tabbar_compose_button")
-        
-        
-        
+                
         btn.addTarget(self, action: #selector(composeClick(btn:)), for: .touchUpInside)
         return btn
     }()
+
+    
 
 }
