@@ -78,12 +78,14 @@ class QRCodeViewController: UIViewController {
     private lazy var output: AVCaptureMetadataOutput = AVCaptureMetadataOutput()
     private lazy var previewLayer: AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer(session: session)
     
+    private lazy var containerLayer: CALayer = CALayer()
+    
 }
 
 extension QRCodeViewController: UITabBarDelegate {
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         containerHeightCons.constant = (item.tag == 1) ? 150 : 300
-        view.layoutIfNeeded()
+        view.setNeedsLayout()
         scanLineView.layer.removeAllAnimations()
         
         startAnimation()
@@ -93,7 +95,56 @@ extension QRCodeViewController: UITabBarDelegate {
 
 extension QRCodeViewController: AVCaptureMetadataOutputObjectsDelegate {
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        let obj: AVMetadataMachineReadableCodeObject = metadataObjects.last as! AVMetadataMachineReadableCodeObject
+        guard let metadata = metadataObjects.last else {
+            return
+        }
+        let obj: AVMetadataMachineReadableCodeObject = metadata as! AVMetadataMachineReadableCodeObject
         customLab.text = obj.stringValue ?? ""
+        
+        clearLayers()
+        
+        
+        let objc = previewLayer.transformedMetadataObject(for: metadata)
+//        drawLines(objc: objc as! AVMetadataMachineReadableCodeObject)
+    }
+    
+    private func drawLines(objc: AVMetadataMachineReadableCodeObject) {
+        guard let arr = objc.corners as? [CGPoint] else {
+            return
+        }
+        
+        let layer = CAShapeLayer()
+        layer.lineWidth = 2
+        layer.strokeColor = UIColor.green.cgColor
+        layer.fillColor = UIColor.clear.cgColor
+        
+        let path = UIBezierPath()
+        var point = CGPoint.zero
+        var index = 0
+
+        point = arr[index]
+        index += 1;
+        
+        path.move(to: point)
+        
+        while index < arr.count {
+            point = arr[index]
+            path.addLine(to: point)
+        }
+        
+        path.close()
+        
+        layer.path = path.cgPath
+        containerLayer.addSublayer(layer)
+    }
+    
+    private func clearLayers() {
+        guard let sublayers = containerLayer.sublayers else {
+            return
+        }
+        
+        for layer in sublayers {
+            layer.removeFromSuperlayer()
+        }
     }
 }

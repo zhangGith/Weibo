@@ -18,32 +18,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AD4D4445-8078-4F2C-B83E-1955ED81856D"
+            uuid = "39545AFB-808D-470A-9CCE-7E69CE68871D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WBDemo/Classes/Home/QRCode/QRCodeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "tabBar(_:didSelect:)"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "clearLayers()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E042BD91-3F0D-43E8-BC08-E0EE6A65FC83"
+            uuid = "48C2D765-EFC0-4933-A863-75920C223B44"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WBDemo/Classes/Home/QRCode/QRCodeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "metadataOutput(_:didOutput:from:)"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "drawLines(objc:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
