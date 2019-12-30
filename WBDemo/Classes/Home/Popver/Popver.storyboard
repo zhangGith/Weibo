@@ -1,39 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WL1-6R-fjW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3qt-sG-q7Z">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Popover View Controller-->
-        <scene sceneID="M1p-oz-TUq">
+        <!--Popveriew Controller-->
+        <scene sceneID="j0P-af-b3I">
             <objects>
-                <tableViewController id="WL1-6R-fjW" customClass="PopoverViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qeT-Wf-LRd">
+                <viewController id="3qt-sG-q7Z" customClass="PopveriewController" customModule="WBDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qpE-78-mUJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="popover_background" translatesAutoresizingMaskIntoConstraints="NO" id="KTh-IM-02e">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mit-bg-hGu">
+                                <rect key="frame" x="20" y="64" width="374" height="788"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="sMg-cV-aN2">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sMg-cV-aN2" id="eb8-FJ-AdA">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="WL1-6R-fjW" id="a80-Zq-sN8"/>
-                            <outlet property="delegate" destination="WL1-6R-fjW" id="cDv-jb-JVU"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tG4-yu-GFt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="mUp-2a-zCl" firstAttribute="trailing" secondItem="KTh-IM-02e" secondAttribute="trailing" id="0Pa-iY-M9r"/>
+                            <constraint firstItem="mUp-2a-zCl" firstAttribute="top" secondItem="KTh-IM-02e" secondAttribute="top" constant="7.1054273576010019e-15" id="4iC-U3-Afy"/>
+                            <constraint firstItem="mUp-2a-zCl" firstAttribute="trailing" secondItem="Mit-bg-hGu" secondAttribute="trailing" constant="20" id="9Jq-qT-way"/>
+                            <constraint firstItem="KTh-IM-02e" firstAttribute="leading" secondItem="mUp-2a-zCl" secondAttribute="leading" id="GaH-6B-LLv"/>
+                            <constraint firstItem="Mit-bg-hGu" firstAttribute="top" secondItem="mUp-2a-zCl" secondAttribute="top" constant="20" id="ZR5-1S-Ckk"/>
+                            <constraint firstItem="mUp-2a-zCl" firstAttribute="bottom" secondItem="Mit-bg-hGu" secondAttribute="bottom" constant="10" id="edi-sD-nyp"/>
+                            <constraint firstItem="mUp-2a-zCl" firstAttribute="bottom" secondItem="KTh-IM-02e" secondAttribute="bottom" id="iBK-U2-7Wy"/>
+                            <constraint firstItem="Mit-bg-hGu" firstAttribute="leading" secondItem="mUp-2a-zCl" secondAttribute="leading" constant="20" id="vu1-f6-bAE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mUp-2a-zCl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZRu-dG-tqO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-65" y="49"/>
+            <point key="canvasLocation" x="-142" y="32"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="popover_background" width="217" height="49"/>
+    </resources>
 </document>

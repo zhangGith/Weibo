@@ -36,7 +36,7 @@ class TitleButton: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        imageView?.frame.origin.x = titleLabel?.frame.width ?? 0
+        imageView?.frame.origin.x = titleLabel!.frame.width
         titleLabel?.frame.origin.x = 0
     }
 }

@@ -9,13 +9,15 @@
 import UIKit
 
 class ZCPresentationController: UIPresentationController {
+    // 保存菜单的尺寸
+    var presentFrame = CGRect.zero
 
     override init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?) {
-        super.init(presentedViewController: presentingViewController ?? UIViewController(), presenting: presentingViewController)
+        super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
     }
     
     override func containerViewWillLayoutSubviews() {
-        presentedView?.frame = CGRect(x: 100, y: 45, width: 200, height: 200)
+        presentedView?.frame = presentFrame
         
         containerView?.insertSubview(coverBtn, at: 0)
         coverBtn.addTarget(self, action: #selector(coverClick(btn:)), for: .touchUpInside)
@@ -28,7 +30,7 @@ class ZCPresentationController: UIPresentationController {
     
     private lazy var coverBtn: UIButton = {
         let btn = UIButton()
-        btn.backgroundColor = .clear
+        btn.backgroundColor = .green
         btn.frame = UIScreen.main.bounds
         return btn
     }()

@@ -10,6 +10,7 @@
 		7152F81123B5E62E004C965F /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7152F81023B5E62E004C965F /* BaseTableViewController.swift */; };
 		7152F81323B5E6B1004C965F /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7152F81223B5E6B1004C965F /* VisitorView.swift */; };
 		7152F81723B5E70B004C965F /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7152F81623B5E70B004C965F /* VisitorView.xib */; };
+		71632D0C23B993AF00F833E3 /* ZCPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71632D0B23B993AF00F833E3 /* ZCPresentationManager.swift */; };
 		71E062C623B593C700FF62AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E062C523B593C700FF62AD /* AppDelegate.swift */; };
 		71E062CF23B593CC00FF62AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71E062CE23B593CC00FF62AD /* Assets.xcassets */; };
 		71E062DD23B593CD00FF62AD /* WBDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E062DC23B593CD00FF62AD /* WBDemoTests.swift */; };
@@ -58,6 +59,7 @@
 		7152F81023B5E62E004C965F /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		7152F81223B5E6B1004C965F /* VisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		7152F81623B5E70B004C965F /* VisitorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
+		71632D0B23B993AF00F833E3 /* ZCPresentationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCPresentationManager.swift; sourceTree = "<group>"; };
 		71E062C223B593C700FF62AD /* WBDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71E062C523B593C700FF62AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71E062CE23B593CC00FF62AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				F99D96C723B8C64F009443B4 /* Popver.storyboard */,
 				F99D96CB23B8F850009443B4 /* PopveriewController.swift */,
 				F99D96C923B8C681009443B4 /* ZCPresentationController.swift */,
+				71632D0B23B993AF00F833E3 /* ZCPresentationManager.swift */,
 			);
 			path = Popver;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				71E0630423B596D400FF62AD /* ProfileViewController.swift in Sources */,
 				71E0630223B596C400FF62AD /* MessageViewController.swift in Sources */,
 				F99D96C323B8B663009443B4 /* UIBarButtonItem+Extension.swift in Sources */,
+				71632D0C23B993AF00F833E3 /* ZCPresentationManager.swift in Sources */,
 				71E0630023B596B400FF62AD /* DiscoverViewController.swift in Sources */,
 				F99D96CA23B8C681009443B4 /* ZCPresentationController.swift in Sources */,
 				71E0630F23B5D05B00FF62AD /* UIButton+Extension.swift in Sources */,
