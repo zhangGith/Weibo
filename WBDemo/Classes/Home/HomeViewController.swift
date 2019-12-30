@@ -66,7 +66,9 @@ class HomeViewController: BaseTableViewController {
     }
     
     @objc func rightClick() {
-        NJLog(message: "right")
+        let sb = UIStoryboard(name: "QRCode", bundle: nil)
+        guard let vc = sb.instantiateInitialViewController() else { return }
+        present(vc, animated: true, completion: nil)
     }
     
     private lazy var animatorManager: ZCPresentationManager = {

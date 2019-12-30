@@ -30,7 +30,7 @@ class ZCPresentationController: UIPresentationController {
     
     private lazy var coverBtn: UIButton = {
         let btn = UIButton()
-        btn.backgroundColor = .green
+        btn.backgroundColor = .clear
         btn.frame = UIScreen.main.bounds
         return btn
     }()

@@ -44,19 +44,20 @@ class ZCPresentationManager: NSObject {
 }
 
 extension ZCPresentationManager: UIViewControllerTransitioningDelegate {
-        
+        // 该方法用于返回一个负责转场动画的对象
+        // 可以在该对象中控制弹出视图的尺寸等
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         let pc = ZCPresentationController(presentedViewController: presented, presenting: presenting)
         pc.presentFrame = presentFrame
         return pc
         }
-    
+    // 该方法用于返回一个负责转场如何出现的对象
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         isPresent = true
         NotificationCenter.default.post(name: Notification.Name(ZCPresentationManagerDidPresented), object: self)
         return self
     }
-    
+    // 该方法用于返回一个负责转场如何消失的对象
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         isPresent = false
         NotificationCenter.default.post(name: Notification.Name(ZCPresentationManagerDidPresented), object: self)
@@ -67,10 +68,11 @@ extension ZCPresentationManager: UIViewControllerTransitioningDelegate {
 }
 
 extension ZCPresentationManager: UIViewControllerAnimatedTransitioning {
+    // 告诉系统展现和消失的动画时长
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.5
     }
-    
+    // 专门用于管理modal如何展现和消失的, 无论是展现还是消失都会调用该方法
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         if isPresent {
             willDismissController(transitionContext: transitionContext)
