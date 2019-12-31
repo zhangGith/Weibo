@@ -66,7 +66,7 @@ class HomeViewController: BaseTableViewController {
     }
     
     @objc func rightClick() {
-        let sb = UIStoryboard(name: "QRCode", bundle: nil)
+        let sb = UIStoryboard(name: "ZCQRCode", bundle: nil)
         guard let vc = sb.instantiateInitialViewController() else { return }
         present(vc, animated: true, completion: nil)
     }

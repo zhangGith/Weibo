@@ -18,31 +18,31 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "39545AFB-808D-470A-9CCE-7E69CE68871D"
+            uuid = "147AC38D-2CD2-43BD-B50C-61AC1950A342"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WBDemo/Classes/Home/QRCode/QRCodeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "clearLayers()"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "48C2D765-EFC0-4933-A863-75920C223B44"
-            shouldBeEnabled = "Yes"
+            uuid = "C077CAD2-1F33-4A8D-BBA9-5D4A0C9EF757"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WBDemo/Classes/Home/QRCode/QRCodeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
             landmarkName = "drawLines(objc:)"
             landmarkType = "7">
          </BreakpointContent>
