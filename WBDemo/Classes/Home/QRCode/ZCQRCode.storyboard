@@ -57,6 +57,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zra-4O-hX8">
+                                <rect key="frame" x="132" y="658.5" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Qsw-1g-c4n"/>
+                                </constraints>
+                                <state key="normal" title="二维码生成"/>
+                                <connections>
+                                    <segue destination="tuH-1T-g1f" kind="showDetail" id="YBW-lb-jcg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -66,8 +76,10 @@
                             <constraint firstItem="xmG-C7-y2y" firstAttribute="leading" secondItem="Nhr-g9-Rm7" secondAttribute="leading" id="DS2-sh-HXa"/>
                             <constraint firstItem="Nhr-g9-Rm7" firstAttribute="trailing" secondItem="CPo-xn-w75" secondAttribute="trailing" id="Ghx-0W-uMA"/>
                             <constraint firstItem="xmG-C7-y2y" firstAttribute="trailing" secondItem="Nhr-g9-Rm7" secondAttribute="trailing" id="PDC-tR-9VK"/>
+                            <constraint firstItem="zra-4O-hX8" firstAttribute="top" secondItem="CPo-xn-w75" secondAttribute="bottom" constant="20" id="T5V-TO-LR1"/>
                             <constraint firstItem="jhU-Mo-Rnu" firstAttribute="centerY" secondItem="7FU-sE-kV0" secondAttribute="centerY" id="VGY-hv-hdc"/>
                             <constraint firstItem="jhU-Mo-Rnu" firstAttribute="centerX" secondItem="7FU-sE-kV0" secondAttribute="centerX" id="aBF-Dk-fjf"/>
+                            <constraint firstItem="zra-4O-hX8" firstAttribute="centerX" secondItem="7FU-sE-kV0" secondAttribute="centerX" id="trS-cg-r5t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Nhr-g9-Rm7"/>
                     </view>
@@ -96,6 +108,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Fc-N0-JcS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1002.8985507246377" y="77.678571428571431"/>
+        </scene>
+        <!--Code Create View Controller-->
+        <scene sceneID="0d7-jn-YRG">
+            <objects>
+                <viewController id="tuH-1T-g1f" customClass="QRCodeCreateViewController" customModule="WBDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zxz-kx-cf6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jiw-TR-y4c">
+                                <rect key="frame" x="107" y="321" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="54F-d1-l9n"/>
+                                    <constraint firstAttribute="width" secondItem="Jiw-TR-y4c" secondAttribute="height" id="RSX-Op-e3u"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Jiw-TR-y4c" firstAttribute="centerY" secondItem="Zxz-kx-cf6" secondAttribute="centerY" id="H1n-MG-ecE"/>
+                            <constraint firstItem="Jiw-TR-y4c" firstAttribute="centerX" secondItem="Zxz-kx-cf6" secondAttribute="centerX" id="bCO-xU-cQV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hxg-M0-E12"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Jiw-TR-y4c" id="xVb-1d-A7u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uHr-GB-jly" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2010" y="78"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nVn-40-PvF">

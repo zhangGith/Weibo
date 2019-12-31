@@ -31,6 +31,7 @@
 		71E0631723B5DB5200FF62AD /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71E0631623B5DB5200FF62AD /* Discover.storyboard */; };
 		71E0631923B5DB6000FF62AD /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71E0631823B5DB6000FF62AD /* Message.storyboard */; };
 		71E0631B23B5DB7200FF62AD /* Null.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71E0631A23B5DB7200FF62AD /* Null.storyboard */; };
+		71E1B7C123BB1996003041A4 /* QRCodeCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E1B7C023BB1996003041A4 /* QRCodeCreateViewController.swift */; };
 		A938CE945B8419406A74CEEB /* Pods_WBDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD035FD0139EB1E1F9E8833 /* Pods_WBDemo.framework */; };
 		F99D96C323B8B663009443B4 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99D96C223B8B663009443B4 /* UIBarButtonItem+Extension.swift */; };
 		F99D96C523B8BDC2009443B4 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99D96C423B8BDC2009443B4 /* TitleButton.swift */; };
@@ -88,6 +89,7 @@
 		71E0631623B5DB5200FF62AD /* Discover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		71E0631823B5DB6000FF62AD /* Message.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
 		71E0631A23B5DB7200FF62AD /* Null.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Null.storyboard; sourceTree = "<group>"; };
+		71E1B7C023BB1996003041A4 /* QRCodeCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeCreateViewController.swift; sourceTree = "<group>"; };
 		7CE74BC536E6B707162BC63B /* Pods-WBDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBDemo.debug.xcconfig"; path = "Target Support Files/Pods-WBDemo/Pods-WBDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		AAD035FD0139EB1E1F9E8833 /* Pods_WBDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F99D96C223B8B663009443B4 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			children = (
 				71632D0E23B9D11300F833E3 /* QRCodeViewController.swift */,
 				71632D1023B9D13100F833E3 /* ZCQRCode.storyboard */,
+				71E1B7C023BB1996003041A4 /* QRCodeCreateViewController.swift */,
 			);
 			path = QRCode;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71E1B7C123BB1996003041A4 /* QRCodeCreateViewController.swift in Sources */,
 				7152F81123B5E62E004C965F /* BaseTableViewController.swift in Sources */,
 				71E062C623B593C700FF62AD /* AppDelegate.swift in Sources */,
 				71632D0F23B9D11300F833E3 /* QRCodeViewController.swift in Sources */,
