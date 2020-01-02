@@ -127,6 +127,7 @@ extension QRCodeViewController: UIImagePickerControllerDelegate, UINavigationCon
 
 extension QRCodeViewController: UITabBarDelegate {
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        NJLog(message: item.tag)
         containerHeightCons.constant = (item.tag == 1) ? 150 : 300
         view.setNeedsLayout()
         scanLineView.layer.removeAllAnimations()

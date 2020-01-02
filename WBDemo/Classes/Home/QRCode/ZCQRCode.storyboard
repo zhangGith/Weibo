@@ -24,7 +24,7 @@
                                 </constraints>
                                 <items>
                                     <tabBarItem title="二维码" image="qrcode_tabbar_icon_qrcode" id="M48-8U-HO6"/>
-                                    <tabBarItem title="条形码" image="qrcode_tabbar_icon_barcode" id="HfM-Lj-hXI"/>
+                                    <tabBarItem tag="1" title="条形码" image="qrcode_tabbar_icon_barcode" id="HfM-Lj-hXI"/>
                                 </items>
                             </tabBar>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhU-Mo-Rnu">
@@ -40,15 +40,15 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="9ng-8B-8Pv" secondAttribute="trailing" id="2hw-5O-GQe"/>
-                                    <constraint firstItem="rUO-ED-3aI" firstAttribute="leading" secondItem="jhU-Mo-Rnu" secondAttribute="leading" id="5LZ-e3-7f4"/>
                                     <constraint firstAttribute="height" constant="300" id="I0A-et-Sk2"/>
                                     <constraint firstAttribute="width" constant="300" id="PlI-Th-K9v"/>
                                     <constraint firstItem="9ng-8B-8Pv" firstAttribute="leading" secondItem="jhU-Mo-Rnu" secondAttribute="leading" id="Tvn-H5-USg"/>
                                     <constraint firstItem="9ng-8B-8Pv" firstAttribute="top" secondItem="jhU-Mo-Rnu" secondAttribute="top" id="UGu-xI-hBc"/>
+                                    <constraint firstAttribute="trailing" secondItem="rUO-ED-3aI" secondAttribute="trailing" id="X7S-QY-dt9"/>
                                     <constraint firstAttribute="bottom" secondItem="9ng-8B-8Pv" secondAttribute="bottom" id="YG9-Gf-XcK"/>
                                     <constraint firstItem="rUO-ED-3aI" firstAttribute="top" secondItem="jhU-Mo-Rnu" secondAttribute="top" id="aUS-iB-GjS"/>
-                                    <constraint firstItem="rUO-ED-3aI" firstAttribute="height" secondItem="jhU-Mo-Rnu" secondAttribute="height" id="gBU-R0-D50"/>
-                                    <constraint firstAttribute="trailing" secondItem="rUO-ED-3aI" secondAttribute="trailing" id="t9g-uG-zY6"/>
+                                    <constraint firstItem="rUO-ED-3aI" firstAttribute="height" secondItem="jhU-Mo-Rnu" secondAttribute="height" id="eug-nF-bCo"/>
+                                    <constraint firstItem="rUO-ED-3aI" firstAttribute="leading" secondItem="jhU-Mo-Rnu" secondAttribute="leading" id="yzG-UC-neR"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="将二维码放入框内, 即可扫描二维码" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPo-xn-w75">
@@ -64,7 +64,7 @@
                                 </constraints>
                                 <state key="normal" title="二维码生成"/>
                                 <connections>
-                                    <segue destination="tuH-1T-g1f" kind="showDetail" id="YBW-lb-jcg"/>
+                                    <segue destination="tuH-1T-g1f" kind="show" id="cFL-zE-eQQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -114,11 +114,11 @@
             <objects>
                 <viewController id="tuH-1T-g1f" customClass="QRCodeCreateViewController" customModule="WBDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zxz-kx-cf6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jiw-TR-y4c">
-                                <rect key="frame" x="107" y="321" width="200" height="200"/>
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="54F-d1-l9n"/>
                                     <constraint firstAttribute="width" secondItem="Jiw-TR-y4c" secondAttribute="height" id="RSX-Op-e3u"/>
@@ -132,6 +132,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hxg-M0-E12"/>
                     </view>
+                    <navigationItem key="navigationItem" id="0yt-Qg-xeZ"/>
                     <connections>
                         <outlet property="imageView" destination="Jiw-TR-y4c" id="xVb-1d-A7u"/>
                     </connections>
