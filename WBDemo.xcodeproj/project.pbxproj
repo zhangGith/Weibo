@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		712C2B4323BF185D0085A612 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 712C2B4223BF185D0085A612 /* Welcome.storyboard */; };
+		712C2B4523BF1F560085A612 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712C2B4423BF1F560085A612 /* WelcomeViewController.swift */; };
+		712C2B4723BF28B60085A612 /* NewfeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712C2B4623BF28B60085A612 /* NewfeatureViewController.swift */; };
+		712C2B4923BF28CC0085A612 /* Newfeature.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 712C2B4823BF28CC0085A612 /* Newfeature.storyboard */; };
 		7152F81123B5E62E004C965F /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7152F81023B5E62E004C965F /* BaseTableViewController.swift */; };
 		7152F81323B5E6B1004C965F /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7152F81223B5E6B1004C965F /* VisitorView.swift */; };
 		7152F81723B5E70B004C965F /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7152F81623B5E70B004C965F /* VisitorView.xib */; };
@@ -59,6 +63,10 @@
 
 /* Begin PBXFileReference section */
 		46179915348D2F709A57BCB5 /* Pods-WBDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBDemo.release.xcconfig"; path = "Target Support Files/Pods-WBDemo/Pods-WBDemo.release.xcconfig"; sourceTree = "<group>"; };
+		712C2B4223BF185D0085A612 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		712C2B4423BF1F560085A612 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		712C2B4623BF28B60085A612 /* NewfeatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewfeatureViewController.swift; sourceTree = "<group>"; };
+		712C2B4823BF28CC0085A612 /* Newfeature.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Newfeature.storyboard; sourceTree = "<group>"; };
 		7152F81023B5E62E004C965F /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		7152F81223B5E6B1004C965F /* VisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		7152F81623B5E70B004C965F /* VisitorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
@@ -133,6 +141,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		712C2B4123BF184B0085A612 /* Newfeature */ = {
+			isa = PBXGroup;
+			children = (
+				712C2B4423BF1F560085A612 /* WelcomeViewController.swift */,
+				712C2B4223BF185D0085A612 /* Welcome.storyboard */,
+				712C2B4623BF28B60085A612 /* NewfeatureViewController.swift */,
+				712C2B4823BF28CC0085A612 /* Newfeature.storyboard */,
+			);
+			path = Newfeature;
+			sourceTree = "<group>";
+		};
 		71632D0D23B9D0F300F833E3 /* QRCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +216,7 @@
 		71E062F523B5965C00FF62AD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				712C2B4123BF184B0085A612 /* Newfeature */,
 				71E062F623B5965C00FF62AD /* Home */,
 				71E062F723B5965C00FF62AD /* Tools */,
 				71E062F823B5965C00FF62AD /* Discover */,
@@ -421,8 +441,10 @@
 				71E0631323B5DB2200FF62AD /* Home.storyboard in Resources */,
 				71E0631723B5DB5200FF62AD /* Discover.storyboard in Resources */,
 				71E0631923B5DB6000FF62AD /* Message.storyboard in Resources */,
+				712C2B4923BF28CC0085A612 /* Newfeature.storyboard in Resources */,
 				F99D96C823B8C64F009443B4 /* Popver.storyboard in Resources */,
 				7152F81723B5E70B004C965F /* VisitorView.xib in Resources */,
+				712C2B4323BF185D0085A612 /* Welcome.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,12 +520,14 @@
 				71E0630223B596C400FF62AD /* MessageViewController.swift in Sources */,
 				F99D96C323B8B663009443B4 /* UIBarButtonItem+Extension.swift in Sources */,
 				71632D0C23B993AF00F833E3 /* ZCPresentationManager.swift in Sources */,
+				712C2B4523BF1F560085A612 /* WelcomeViewController.swift in Sources */,
 				71E0630023B596B400FF62AD /* DiscoverViewController.swift in Sources */,
 				F99D96CA23B8C681009443B4 /* ZCPresentationController.swift in Sources */,
 				71E0630F23B5D05B00FF62AD /* UIButton+Extension.swift in Sources */,
 				7152F81323B5E6B1004C965F /* VisitorView.swift in Sources */,
 				71E0630623B596F400FF62AD /* MainViewController.swift in Sources */,
 				F99D96C523B8BDC2009443B4 /* TitleButton.swift in Sources */,
+				712C2B4723BF28B60085A612 /* NewfeatureViewController.swift in Sources */,
 				71E0630D23B5A60B00FF62AD /* NullViewController.swift in Sources */,
 				F99D96CC23B8F850009443B4 /* PopveriewController.swift in Sources */,
 			);

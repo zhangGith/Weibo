@@ -18,7 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
-        window?.rootViewController = MainViewController()
+        let sb = UIStoryboard(name: "Newfeature", bundle: nil)
+        window?.rootViewController = sb.instantiateInitialViewController()
+//        window?.rootViewController = MainViewController()
         window?.makeKeyAndVisible()
         
         

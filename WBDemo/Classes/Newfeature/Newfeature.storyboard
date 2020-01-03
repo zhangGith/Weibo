@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ymd-hN-qXA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Newfeature View Controller-->
+        <scene sceneID="tYz-s6-jWk">
+            <objects>
+                <viewController id="ymd-hN-qXA" customClass="NewfeatureViewController" customModule="WBDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SFT-9c-c7b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0gn-CO-klH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.32957163189999999" green="1" blue="0.1248366229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewLayout key="collectionViewLayout" id="FHd-Mt-vXb" customClass="ZCNewfeatureLayout" customModule="WBDemo" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newfeaCell" id="XLo-0p-6X1" customClass="ZCNewfeatureCell" customModule="WBDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9dJ-55-zBX">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="ymd-hN-qXA" id="urL-Dv-YPm"/>
+                                    <outlet property="delegate" destination="ymd-hN-qXA" id="AmF-P0-rI4"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ypn-vT-A0Y" firstAttribute="bottom" secondItem="0gn-CO-klH" secondAttribute="bottom" id="16K-D2-uEo"/>
+                            <constraint firstItem="0gn-CO-klH" firstAttribute="leading" secondItem="Ypn-vT-A0Y" secondAttribute="leading" id="4Yn-Nl-y5i"/>
+                            <constraint firstItem="Ypn-vT-A0Y" firstAttribute="trailing" secondItem="0gn-CO-klH" secondAttribute="trailing" id="V1R-ut-1CK"/>
+                            <constraint firstItem="0gn-CO-klH" firstAttribute="top" secondItem="Ypn-vT-A0Y" secondAttribute="top" id="tSn-qT-TAa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ypn-vT-A0Y"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="0gn-CO-klH" id="3MA-ni-yD6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Rx-SL-eqn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="50"/>
+        </scene>
+    </scenes>
+</document>
