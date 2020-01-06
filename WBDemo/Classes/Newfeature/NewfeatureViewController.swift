@@ -57,6 +57,7 @@ extension NewfeatureViewController: UICollectionViewDelegate {
 class ZCNewfeatureCell: UICollectionViewCell {
     var index: Int = 0 {
         didSet {
+            
             iconView.image = UIImage(named: "new_feature_\(index + 1)")
             startBtn.isHidden = true
         }
@@ -109,7 +110,6 @@ class ZCNewfeatureCell: UICollectionViewCell {
 class ZCNewfeatureLayout: UICollectionViewFlowLayout {
     override func prepare() {
         itemSize = UIScreen.main.bounds.size
-        sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         minimumLineSpacing = 0
         minimumInteritemSpacing = 0
         scrollDirection = .horizontal

@@ -10,5 +10,6 @@ target 'WBDemo' do
   pod 'SVProgressHUD'
   pod 'SDWebImage'
   pod 'SnapKit'
+  pod 'R.swift'
   
 end

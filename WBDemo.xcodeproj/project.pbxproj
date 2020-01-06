@@ -11,6 +11,7 @@
 		712C2B4523BF1F560085A612 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712C2B4423BF1F560085A612 /* WelcomeViewController.swift */; };
 		712C2B4723BF28B60085A612 /* NewfeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712C2B4623BF28B60085A612 /* NewfeatureViewController.swift */; };
 		712C2B4923BF28CC0085A612 /* Newfeature.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 712C2B4823BF28CC0085A612 /* Newfeature.storyboard */; };
+		713B37E723C320A80099B283 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B37E623C320A80099B283 /* R.generated.swift */; };
 		7152F81123B5E62E004C965F /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7152F81023B5E62E004C965F /* BaseTableViewController.swift */; };
 		7152F81323B5E6B1004C965F /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7152F81223B5E6B1004C965F /* VisitorView.swift */; };
 		7152F81723B5E70B004C965F /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7152F81623B5E70B004C965F /* VisitorView.xib */; };
@@ -67,6 +68,7 @@
 		712C2B4423BF1F560085A612 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		712C2B4623BF28B60085A612 /* NewfeatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewfeatureViewController.swift; sourceTree = "<group>"; };
 		712C2B4823BF28CC0085A612 /* Newfeature.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Newfeature.storyboard; sourceTree = "<group>"; };
+		713B37E623C320A80099B283 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		7152F81023B5E62E004C965F /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		7152F81223B5E6B1004C965F /* VisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		7152F81623B5E70B004C965F /* VisitorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VisitorView.xib; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 		71E0630923B5A5DD00FF62AD /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				713B37E623C320A80099B283 /* R.generated.swift */,
 				71E0630A23B5A5E600FF62AD /* MainVCSettings.json */,
 				71E0630C23B5A60B00FF62AD /* NullViewController.swift */,
 				71E0631A23B5DB7200FF62AD /* Null.storyboard */,
@@ -334,6 +337,7 @@
 			buildConfigurationList = 71E062EC23B593CD00FF62AD /* Build configuration list for PBXNativeTarget "WBDemo" */;
 			buildPhases = (
 				9B3FC5E5D21F4014F8B0EB64 /* [CP] Check Pods Manifest.lock */,
+				718E86D623C310EE002F61ED /* Run Script */,
 				71E062BE23B593C700FF62AD /* Sources */,
 				71E062BF23B593C700FF62AD /* Frameworks */,
 				71E062C023B593C700FF62AD /* Resources */,
@@ -482,6 +486,26 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WBDemo/Pods-WBDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		718E86D623C310EE002F61ED /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		9B3FC5E5D21F4014F8B0EB64 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -518,6 +542,7 @@
 				71E062FE23B596A500FF62AD /* HomeViewController.swift in Sources */,
 				71E0630423B596D400FF62AD /* ProfileViewController.swift in Sources */,
 				71E0630223B596C400FF62AD /* MessageViewController.swift in Sources */,
+				713B37E723C320A80099B283 /* R.generated.swift in Sources */,
 				F99D96C323B8B663009443B4 /* UIBarButtonItem+Extension.swift in Sources */,
 				71632D0C23B993AF00F833E3 /* ZCPresentationManager.swift in Sources */,
 				712C2B4523BF1F560085A612 /* WelcomeViewController.swift in Sources */,
@@ -689,6 +714,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = D4GN4AXRJD;
 				INFOPLIST_FILE = WBDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -711,6 +737,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = D4GN4AXRJD;
 				INFOPLIST_FILE = WBDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

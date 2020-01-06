@@ -26,7 +26,7 @@ class BaseTableViewController: UITableViewController {
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(loginBtnClick(btn:)))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "登录", style: .plain, target: self, action: #selector(registerBtnClick(btn:)))
-
+        
     }
     
     
